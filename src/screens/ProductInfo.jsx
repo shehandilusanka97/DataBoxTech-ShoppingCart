@@ -61,7 +61,7 @@ const ProductInfo = ({ route, navigation }) => {
           'Item Added Successfully to cart',
           ToastAndroid.SHORT,
         );
-        navigation.navigate('Home');
+        navigation.navigate('HomeScreen');
       } catch (error) {
         return error;
       }
@@ -74,7 +74,7 @@ const ProductInfo = ({ route, navigation }) => {
           'Item Added Successfully to cart',
           ToastAndroid.SHORT,
         );
-        navigation.navigate('Home');
+        navigation.navigate('HomeScreen');
       } catch (error) {
         return error;
       }
