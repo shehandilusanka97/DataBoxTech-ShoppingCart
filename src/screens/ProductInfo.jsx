@@ -8,14 +8,12 @@ import {
   Image,
   Dimensions,
   Animated,
-  ToastAndroid,
   SafeAreaView
 } from 'react-native';
 import {COLOURS, Items} from '../database/Database';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
 const ProductInfo = ({ route, navigation }) => {
   const {productID} = route.params;
 
@@ -57,10 +55,7 @@ const ProductInfo = ({ route, navigation }) => {
 
       try {
         await AsyncStorage.setItem('cartItems', JSON.stringify(array));
-        ToastAndroid.show(
-          'Item Added Successfully to cart',
-          ToastAndroid.SHORT,
-        );
+        alert("Item Added Successfully to cart");
         navigation.navigate('HomeScreen');
       } catch (error) {
         return error;
@@ -70,10 +65,7 @@ const ProductInfo = ({ route, navigation }) => {
       array.push(id);
       try {
         await AsyncStorage.setItem('cartItems', JSON.stringify(array));
-        ToastAndroid.show(
-          'Item Added Successfully to cart',
-          ToastAndroid.SHORT,
-        );
+        alert("Item Added Successfully to cart");
         navigation.navigate('HomeScreen');
       } catch (error) {
         return error;

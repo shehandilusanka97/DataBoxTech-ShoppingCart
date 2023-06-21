@@ -117,7 +117,7 @@ const HomeScreen = ({ navigation }) => {
               }}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('ShoppingCart')}>
             <MaterialCommunityIcons
               name="cart"
               style={{
